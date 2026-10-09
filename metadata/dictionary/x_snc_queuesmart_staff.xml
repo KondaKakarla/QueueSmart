@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="c8a587c564a303107f44370f5ab0499f" label="Staff" max_length="40" name="x_snc_queuesmart_staff" type="collection">
+        <element label="Counter" max_length="32" name="counter" reference="x_snc_queuesmart_counter" type="reference"/>
+        <element choice="1" label="Availability" max_length="40" name="availability" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Busy" sequence="1" value="busy"/>
+                <element inactive_on_update="false" label="Available" sequence="0" value="available"/>
+                <element inactive_on_update="false" label="Leave" sequence="2" value="leave"/>
+            </choice>
+        </element>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element display="true" label="Staff Name" max_length="100" name="staff_name" type="string"/>
+        <index name="index">
+            <element name="counter"/>
+        </index>
+    </element>
+</database>

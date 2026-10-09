@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="3a629341642703107f44370f5ab04991" label="Queue" max_length="40" name="x_snc_queuesmart_queue" type="collection">
+        <element label="Response Window Until" max_length="40" name="response_window_until" type="glide_date_time"/>
+        <element label="Actual Start Time" max_length="40" name="actual_start_time" type="glide_date_time"/>
+        <element label="Counter" max_length="32" name="counter" reference="x_snc_queuesmart_counter" type="reference"/>
+        <element label="Actual Service Time" max_length="40" name="actual_service_time" type="integer"/>
+        <element label="Queue Position" max_length="40" name="queue_position" type="integer"/>
+        <element label="Staff" max_length="32" name="staff" reference="x_snc_queuesmart_staff" type="reference"/>
+        <element label="Missed Time" max_length="40" name="missed_time" type="glide_date_time"/>
+        <element label="Estimated Wait Time" max_length="40" name="estimated_wait_time" type="integer"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
+                <element inactive_on_update="false" label="Waiting" sequence="0" value="waiting"/>
+                <element inactive_on_update="false" label="Called" sequence="1" value="called"/>
+                <element inactive_on_update="false" label="Missed" sequence="5" value="missed"/>
+                <element inactive_on_update="false" label="Serving" sequence="2" value="serving"/>
+                <element inactive_on_update="false" label="Completed" sequence="3" value="completed"/>
+            </choice>
+        </element>
+        <element default="0" label="Rejoin Count" max_length="40" name="rejoin_count" type="integer"/>
+        <element label="Student" max_length="32" name="student" reference="sys_user" type="reference"/>
+        <element label="Called Time" max_length="40" name="called_time" type="glide_date_time"/>
+        <element label="Arrival Time" max_length="40" name="arrival_time" type="glide_date_time"/>
+        <element label="Workplace" max_length="32" name="workplace" reference="x_snc_queuesmart_workplace" type="reference"/>
+        <element label="Service" max_length="32" name="service" reference="x_snc_queuesmart_service" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Actual End Time" max_length="40" name="actual_end_time" type="glide_date_time"/>
+        <index name="index">
+            <element name="student"/>
+        </index>
+        <index name="index2">
+            <element name="workplace"/>
+        </index>
+        <index name="index3">
+            <element name="counter"/>
+        </index>
+        <index name="index4">
+            <element name="service"/>
+        </index>
+        <index name="index5">
+            <element name="staff"/>
+        </index>
+    </element>
+</database>

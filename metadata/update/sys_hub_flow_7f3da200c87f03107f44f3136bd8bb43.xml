@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2298000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>ueuesmart__5_minute_reminder</internal_name>
+        <label_cache>[{"name":"Updated_1.current","label":"Trigger - Record Updated➛Queue Record","reference":"x_snc_queuesmart_queue","reference_display":"Queue","type":"reference","base_type":"reference","usedInstances":{"8e4784bd-8d87-459f-b97a-db43693f6b14":["record"],"8f0e4240-cbfd-41a4-acd3-f6dae5e5d9d9":["record"],"8a09ccc9-5c4f-4359-b4f9-46a0260be0be":["record"]},"attributes":{}},{"name":"Updated_1.current.student.email","label":"Trigger - Record Updated➛Queue Record➛Student➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"8e4784bd-8d87-459f-b97a-db43693f6b14":["ah_to"],"8f0e4240-cbfd-41a4-acd3-f6dae5e5d9d9":["ah_to"],"8a09ccc9-5c4f-4359-b4f9-46a0260be0be":["ah_to"]}},{"name":"Updated_1.current.estimated_wait_time","label":"Trigger - Record Updated➛Queue Record➛Estimated Wait Time","reference":"","reference_display":"Estimated Wait Time","type":"integer","base_type":"integer","parent_table_name":"x_snc_queuesmart_queue","column_name":"estimated_wait_time","usedInstances":{"3f9ff1a7-4dcd-41c2-a7a0-8ad5a9c89574":["condition"],"a3aba5be-b3d8-4699-bb48-f5966c98d1cc":["condition"]}}]</label_cache>
+        <master_snapshot>4106f240c8bf03107f44f3136bd8bb1e</master_snapshot>
+        <master_snapshot_digest/>
+        <name>QueueSmart - Advance Turn Reminder</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>9d06f240c8bf03107f44f3136bd8bb8c</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 11:44:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7f3da200c87f03107f44f3136bd8bb43</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>QueueSmart - Advance Turn Reminder</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name>sys_hub_flow_7f3da200c87f03107f44f3136bd8bb43</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:23:00</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>7d063640c8bf03107f44f3136bd8bb14</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_queuesmart_queue">estimated_wait_time=5^ORestimated_wait_time=3<item endquery="false" field="estimated_wait_time" goto="false" newquery="false" operator="=" or="false" value="5"/>
+            <item endquery="false" field="estimated_wait_time" goto="false" newquery="false" operator="=" or="true" value="3"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:23:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9d06f240c8bf03107f44f3136bd8bb8c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:23:00</sys_updated_on>
+        <table>x_snc_queuesmart_queue</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>7f3da200c87f03107f44f3136bd8bb43</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:23:00</sys_created_on>
+        <sys_id>9106f240c8bf03107f44f3136bd8bb8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:23:00</sys_updated_on>
+        <trigger display_value="">9d06f240c8bf03107f44f3136bd8bb8c</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=7f3da200c87f03107f44f3136bd8bb43^sys_idNOT IN9106f240c8bf03107f44f3136bd8bb8e"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7f3da200c87f03107f44f3136bd8bb43^sys_idNOT IN333da200c87f03107f44f3136bd8bb45"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7f3da200c87f03107f44f3136bd8bb43</id>
+        <name>ueueSmart - 5 Minute Reminder</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 11:44:40</sys_created_on>
+        <sys_id>333da200c87f03107f44f3136bd8bb45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 11:44:40</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=333da200c87f03107f44f3136bd8bb45"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=7f3da200c87f03107f44f3136bd8bb43^sys_idNOT IN1fcdea40c87f03107f44f3136bd8bb18,4bcdaa40c87f03107f44f3136bd8bbaf,d7cdea40c87f03107f44f3136bd8bb3c"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="QueueSmart - Advance Turn Reminder">7f3da200c87f03107f44f3136bd8bb43</model>
+        <model_id>7f3da200c87f03107f44f3136bd8bb43</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7f3da200c87f03107f44f3136bd8bb43</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 11:47:05</sys_created_on>
+        <sys_id>1fcdea40c87f03107f44f3136bd8bb18</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1fcdea40c87f03107f44f3136bd8bb18"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="QueueSmart - Advance Turn Reminder">7f3da200c87f03107f44f3136bd8bb43</model>
+        <model_id>7f3da200c87f03107f44f3136bd8bb43</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7f3da200c87f03107f44f3136bd8bb43</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 11:47:05</sys_created_on>
+        <sys_id>4bcdaa40c87f03107f44f3136bd8bbaf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4bcdaa40c87f03107f44f3136bd8bbaf"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="QueueSmart - Advance Turn Reminder">7f3da200c87f03107f44f3136bd8bb43</model>
+        <model_id>7f3da200c87f03107f44f3136bd8bb43</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7f3da200c87f03107f44f3136bd8bb43</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 11:47:06</sys_created_on>
+        <sys_id>d7cdea40c87f03107f44f3136bd8bb3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 11:47:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d7cdea40c87f03107f44f3136bd8bb3c"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=7f3da200c87f03107f44f3136bd8bb43^sys_idNOT INb2cd6a40c87f03107f44f3136bd8bb6f"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">7f3da200c87f03107f44f3136bd8bb43</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 11:47:04</sys_created_on>
+        <sys_id>b2cd6a40c87f03107f44f3136bd8bb6f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:58</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=7f3da200c87f03107f44f3136bd8bb43^sys_idNOT IN60d2b2c8c87f03107f44f3136bd8bbb3,9f74f28cc87f03107f44f3136bd8bb91"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">7f3da200c87f03107f44f3136bd8bb43</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>3f9ff1a7-4dcd-41c2-a7a0-8ad5a9c89574</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:09:01</sys_created_on>
+        <sys_id>60d2b2c8c87f03107f44f3136bd8bbb3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 07:40:10</sys_updated_on>
+        <ui_id>8f0e4240-cbfd-41a4-acd3-f6dae5e5d9d9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XXW/bNhSG/wqha1eVv+PctTGCFUjaLc46DE0hUBRlc6VIjaTiuIH/+w4lWpLt1LUTD0uw3NmHX+85fB9S/HLvsdg79XrxSTCIkh4eBt1ONwhOOqNR1B0lwclwFLRJ7LU8gVMKPRUlUtn/t5jnNnB//3sWY0PjsO2TXCkqzHIJ7THTGceLz64bRMiM8RjavdMvX1tehhXMaKjyTu83mvaVxHFEOXS9xmpKDbpaSduUahaZ/R9LkqcgL2Sr4IWbYOxa0IcxtMAgqypoefTOUBFTkJNgrmnLS7GAXKVaVBFFcfxJ8DowY8LAlO+0loRBXTQyM4poihlHc2ZmCKNSmO/Z+e40+w7iuh07VUKhBsRqZYKwGBR5jXDoSgrNH+rmZIwNnhiVE5OrqtKSEarLasY0wTk3Z81Y2eFTZpgU5RCDI74aLXmeio9lEb1qgsZO5hrE0MzWxiYLi0PiyWQm51crsedMFFV0VeGSYF79SyYUKzI7Z5TbrRZ5GkHfloeNUSzKjZUJpuDQq14nLKTataAn5bTYyhRnGRPTMFPylhULgvzUn3L44ydczmG8ZlPhY2Jz9WH3sH8O8XER/owVs4lfwjQweNny9EKfcax1nT7UP/w7t+rLYqzLsaPDwnB2MFEsM+9gqVvqkl22HGLt0S4/x73at405a8zuQi0I6KA51SlWpvy5zdlvLnwYbHuIq2GzRnlYrANtK3bRHIs+lg0Os/aBmJVmc5RdA1qmpL+EChknryLrJFgn6wdEPQ+SKj72RmkdmX8HCzCJDktvu9yKxR+By88gCQaDKBpE/WG39uGIJPEwSgZ4SLq17+ZwtCoA4VtYHK0NUtrbULhD4zAm9tCyYgKOY57HFP2xErVLp4MkkhLON7FJCCh9e15UtyKk86SLqLQmMhLBZvIFXD+VJBusLyczwwYxjTTslo+uJWIuq8aIFlrIHKW5NtDNQMsafGs3Wu/5cufs4KLjB73yIsA8PoD93RcBro2NZ6GRu78DfW1yu7RfGGy5RNtk7jnqMHL3SKK6zeR2Rg5QDfsnpht8TlZBx2Z3N5vlZbWFZuNyCp4vJi+FAiucs5QVhij5PT4Y8U5P0WDNRoQ0wDjCW2iPxVeGPjvbVnKIoXuPu2xeHf3iHN3e+cCmgzUfRce29B6rryz9fsPT0cGm7r+a+n9i6v5uW5E1I+k8+osS0zB28Xqe2Pc1uqJpUTH0BvXRJRO2ODaImSi99dDDe8+hB37O/DynFSqTKqOHsjwEmcHrh81/Tszx8cA7rZR01s9ZGS8abNzkQdAlGbKa3xgmFimhSkoTQWG+FY3xjXdTdqN/ylyhBhKws8I+LiExJe9YCp/88Bbto9TRged44ZcrvM3KKW7EQSv+Cq9pTVFEkXXlAiVS2ceqKpbemHqbXrfU8cU/Stxh58Mem1pdpeWWbu2xOxlmJuUb58Iv15cX9akwfOJFOuj3u4PXc+HJN2k2jzuxklnmcjvybfr1H9AWou0YGgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=60d2b2c8c87f03107f44f3136bd8bbb3"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">7f3da200c87f03107f44f3136bd8bb43</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>a3aba5be-b3d8-4699-bb48-f5966c98d1cc</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:16:18</sys_created_on>
+        <sys_id>9f74f28cc87f03107f44f3136bd8bb91</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 07:40:10</sys_updated_on>
+        <ui_id>8a09ccc9-5c4f-4359-b4f9-46a0260be0be</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XXW/bNhSG/wqha1eVrdiOc9fGCFYgabc46zA0hUBRVMyVIjWSiuMG/u87lGhJtlPXTjwswXJnH3695/B9SPHLvccS78Q7So6DQZwe4WEQ9sIgOO6NRnE4SoPj4SjoksTreAJnFHoqSqSy/28xL2zg/v73PMGGJlHXJ4VSVJjFAtoTpnOO559dN4iQKeMJtHsnX752vBwrmNFQ5Z3crzXtKonjmHLoeoXVDTXociltXaqZ5/Z/IkmRgbyILYPnboKxa0EfxtACg6yqoOPRO0NFQkFOirmmHS/DAnKVal5HFMXJJ8GbwJQJA1O+01oSBnXRyEwpohlmHM2YmSKMKmG+Z+e70+w7iAt7dqqUQg2I1coEYQko8lrhyJUUmj80zekYGzwxqiCmUHWlJSNUV9VMaIoLbk7bsarDp9wwKaohBsd8OVryIhMfqyJ69QStnSw0iKG5rY1NFhaHxNPJVM4ul2LPmCir6KrCJcG8/pdOKFZkesYot1stiiyGvh0PG6NYXBgrE0zBoVezTlRKtWtBT8ppuZUZznMmbqJcyVtWLgjyM/+Gwx8/5XIG4zW7ET4mNlcfdg/7ZxAfl+HPWDGb+AVMA4MXHU/P9SnHWjfpQ/2jvwurvirGqhw7OioNZwcTxXLzDpa6pS7ZRcch1h1t83Ny1Pi2NWeD2V2kBQEdtKA6w8pUPzc5+82F94NtB3ENbNYoD4t1oG3Ezttj0ceqwWHW3ROzymyOsitAy1T0V1Ah4+TVZB0Hq2T9gKjnQVLNx84orSLz72ABJtFR5W2XW7n4I3D5GSTBYBDHg7g/DBsfjkiaDON0gIckbHw3g6NVAQjfovJobZHS3YTCHRr7MbGDliUTcBzzIqHoj6WobTodJLGUcL6JdUJA6duzsro1Ib0nXUSVNZGRCDaTz+H6qSXZYHM5mSk2iGmkYbd8dCURc1m1RnTQXBYoK7SBbgZaVuBbudGOni93zg4uOn7QKy8CzMMD2N9+EeDG2HgaGbn9O9DXprBL+6XBFgu0SeaOo/Yjd4ck6ttMbmbkANWwf+Jmjc/JMujYDLezWV1WG2i2Lqfg+WLyUiiwwjnLWGmIit/Dg5Fs9RQNVmxESAuMA7yFdlh8aejT000l+xj66HGXzaujX5yju1sf2HSw4qP40JbeYfWlpd+veTre29T9V1P/T0zd324rsmIkXcR/UWJaxi5fzxP7vkaXNCsrht6gEF0wYYtjg5iJylsPPbx3HLrn58zPc1qiMqkzeijLfZAZvH7Y/OfEHB4PvNVKaW/1nJXJvMXGdREEIcmR1fzGMDHPCFVSmhgK861sTK6966ob/VMWCrWQgJ0V9nEJiSl5xzL45Ie3aIgyRwee4blfrfA2r6a4Fnut+Cu8pjVFMUXWlXOUSmUfq6pcem3qTXrdUocX/yhx+50PO2xqfZVWW7qxx+5kmJqMr50Lv1xdnDenwvCJF+mg3w8Hr+fCk2/SfJb0EiXz3OV24Nv06z+qLZOIGBoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9f74f28cc87f03107f44f3136bd8bb91"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=7f3da200c87f03107f44f3136bd8bb43^sys_idNOT INc741b208c87f03107f44f3136bd8bb47,5f333ec8c87f03107f44f3136bd8bbb0"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7006b240c8bf03107f44f3136bd8bbfc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">7f3da200c87f03107f44f3136bd8bb43</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:02:22</sys_created_on>
+        <sys_id>c741b208c87f03107f44f3136bd8bb47</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:58</sys_updated_on>
+        <ui_id>3f9ff1a7-4dcd-41c2-a7a0-8ad5a9c89574</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXW/TMBT9K5GfoygfS8X6NgGTkIBJrIwHNlmOfdNaOHawnXal6n/nOh9dxTpRTTzyVp/7dc7NueqOmM63nXcLc+WcXGoy//4QE6kDhr93RAoyJ3XK6uySZ7zIZ0Wepvmbi6yaFVWWi4IBK0hMNGsAM7nRQnppNO2BmKyZ6kLgvfOyYR5E9I1JHy1kA5F0URlhjpCuVWx7d0YqX0klLIw8W2ZxigdL5rs/Qn7bAlWsAoUdb72Veonl56qZCt9OcqKPPfKyzjAPcTdNMlYEWlkaE3j0oAXg6JopBzFpmBbMG7s9IBaYuNHqCVhJ7bEdCcmPTv7C3nlZhsQaUCOHIXh40nGHA8xXRnK4aQPBAfGsUmMNN6pr9OdBR9g+1KxTfto+Ip3DftAG0oHFSKm+XZnNl2ngtdS9wDGoDGfq8GIe11B1Hlz4MKCgwUa0YW2Ly6GtNWvZFyOXJlkqfCS1MhscGjyYMB6IJ7gjllwj/q6H75iVQcUnbIPFA82KOclp71ds5y1K2PdroT+7QGgQOEqhwzYwwXErW3+Fc9Ywst7Ho9kvWVmXWVqetsfF7IQJjny+231tRTAvzRLeWdyVT2AyNN2goSk+YL+/79K0EOVz+7+iw7+4ijNkP7uK06t44RTyv5xC+HhnXkKapv9P4fgUpKODpUdt/fBXX8JDsPMwwQ2+EcClQyKLgH2Y/h1CYIsGkPwY2hj7I0h4wva/AZmgTAFnBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7806b240c8bf03107f44f3136bd8bbff</block>
+        <comment/>
+        <connected_to>3f9ff1a7-4dcd-41c2-a7a0-8ad5a9c89574</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">7f3da200c87f03107f44f3136bd8bb43</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:10:51</sys_created_on>
+        <sys_id>5f333ec8c87f03107f44f3136bd8bbb0</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:58</sys_updated_on>
+        <ui_id>a3aba5be-b3d8-4699-bb48-f5966c98d1cc</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW8TMRD9K5HPq9V+0Apyq4BKSEAlGsoBKmvWnk0svPZie5OGKP+d8X6kEUrVqAdO3OI3X+/NvlF2zHah7YJf2Cvv1dKw+ff7hCkTMfq9Y0qyOaszqPM3IhdlcVkWWVa8fpVXl2WVF7IEhIIlzECDlCmskSooa3gPJGwNuouB9z6oBgLK2TdQYbZQDc6Un5WUIpVvNWzvns8UK6Wlw5FlC45mBHRsvvsrFLYtcg0Vamp4G5wySyo/V8tU+HYSM/vYI0+rjPMI99Mk62SklWcJw4eARiKNrkF7TFgDRkKwbntAHIK8MfoRWCkTqB2LyQ9e/abexcVFTKyRNAocgocnH1c4wGJllcCbNhIckACVHmuE1V1jPg864vKxhk6HafmEdJ76YRtJRxYjpfp2ZTdfpoHXyvQCx6C2AvThBYHWUHUBffwwqLGhRryBtqXl8NbZteqLiUuTLjU90lrbDQ2NDkxBROIp7QjSa8Lf9fAdOBVVfKI2VDzQrMArwXu3UrvgSMK+Xwv/1UVCg8BRCh+2QQleONWGK5qzxpH1PjnP6vkJExy5fLf72sroXZ6nonO0q5Di5Ge+IT9zeuB+/6PLslKecP8LOvyDq8hPXcXpVTxxCsUzpxA/3pmXkGXZ/1M4PgXl+WDpUVs//MWXcB/tPEzwg28kCuWJyCJiH6b/hhjYkgGUOIY21v2MEh6x/R+o+8XdZQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7f3da200c87f03107f44f3136bd8bb43</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 11:47:06</sys_created_on>
+        <sys_id>13cdea40c87f03107f44f3136bd8bb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 11:47:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7f3da200c87f03107f44f3136bd8bb43</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 11:47:05</sys_created_on>
+        <sys_id>5bcdea40c87f03107f44f3136bd8bb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 11:47:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7f3da200c87f03107f44f3136bd8bb43</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 11:47:06</sys_created_on>
+        <sys_id>d3cdea40c87f03107f44f3136bd8bb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 11:47:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7f3da200c87f03107f44f3136bd8bb43"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>ueuesmart__5_minute_reminder</internal_name>
+        <label_cache>[{"name":"Updated_1.current","label":"Trigger - Record Updated➛Queue Record","reference":"x_snc_queuesmart_queue","reference_display":"Queue","type":"reference","base_type":"reference","usedInstances":{"8e4784bd-8d87-459f-b97a-db43693f6b14":["record"],"8f0e4240-cbfd-41a4-acd3-f6dae5e5d9d9":["record"],"8a09ccc9-5c4f-4359-b4f9-46a0260be0be":["record"]},"attributes":{}},{"name":"Updated_1.current.student.email","label":"Trigger - Record Updated➛Queue Record➛Student➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"8e4784bd-8d87-459f-b97a-db43693f6b14":["ah_to"],"8f0e4240-cbfd-41a4-acd3-f6dae5e5d9d9":["ah_to"],"8a09ccc9-5c4f-4359-b4f9-46a0260be0be":["ah_to"]}},{"name":"Updated_1.current.estimated_wait_time","label":"Trigger - Record Updated➛Queue Record➛Estimated Wait Time","reference":"","reference_display":"Estimated Wait Time","type":"integer","base_type":"integer","parent_table_name":"x_snc_queuesmart_queue","column_name":"estimated_wait_time","usedInstances":{"3f9ff1a7-4dcd-41c2-a7a0-8ad5a9c89574":["condition"],"a3aba5be-b3d8-4699-bb48-f5966c98d1cc":["condition"]}}]</label_cache>
+        <master>true</master>
+        <name>QueueSmart - Advance Turn Reminder</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="QueueSmart - Advance Turn Reminder">7f3da200c87f03107f44f3136bd8bb43</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:22:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4106f240c8bf03107f44f3136bd8bb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:59</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4106f240c8bf03107f44f3136bd8bb1e^sys_idNOT INcd06f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4106f240c8bf03107f44f3136bd8bb1e</id>
+        <name>QueueSmart - Advance Turn Reminder</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:22:59</sys_created_on>
+        <sys_id>cd06f240c8bf03107f44f3136bd8bb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:59</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=cd06f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4106f240c8bf03107f44f3136bd8bb1e^sys_idNOT IN0906f240c8bf03107f44f3136bd8bb20,4506f240c8bf03107f44f3136bd8bb31,8506f240c8bf03107f44f3136bd8bb3b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="QueueSmart - Advance Turn Reminder">4106f240c8bf03107f44f3136bd8bb1e</model>
+        <model_id>4106f240c8bf03107f44f3136bd8bb1e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_4106f240c8bf03107f44f3136bd8bb1e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:22:59</sys_created_on>
+        <sys_id>0906f240c8bf03107f44f3136bd8bb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0906f240c8bf03107f44f3136bd8bb20"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="QueueSmart - Advance Turn Reminder">4106f240c8bf03107f44f3136bd8bb1e</model>
+        <model_id>4106f240c8bf03107f44f3136bd8bb1e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_4106f240c8bf03107f44f3136bd8bb1e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:22:59</sys_created_on>
+        <sys_id>4506f240c8bf03107f44f3136bd8bb31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4506f240c8bf03107f44f3136bd8bb31"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="QueueSmart - Advance Turn Reminder">4106f240c8bf03107f44f3136bd8bb1e</model>
+        <model_id>4106f240c8bf03107f44f3136bd8bb1e</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_4106f240c8bf03107f44f3136bd8bb1e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:22:59</sys_created_on>
+        <sys_id>8506f240c8bf03107f44f3136bd8bb3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8506f240c8bf03107f44f3136bd8bb3b"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=4106f240c8bf03107f44f3136bd8bb1e^sys_idNOT IN5106f240c8bf03107f44f3136bd8bb50"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">4106f240c8bf03107f44f3136bd8bb1e</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:23:00</sys_created_on>
+        <sys_id>5106f240c8bf03107f44f3136bd8bb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:23:00</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4106f240c8bf03107f44f3136bd8bb1e^sys_idNOT IN5106f240c8bf03107f44f3136bd8bb4e,1d06f240c8bf03107f44f3136bd8bb4e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">4106f240c8bf03107f44f3136bd8bb1e</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>3f9ff1a7-4dcd-41c2-a7a0-8ad5a9c89574</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:23:00</sys_created_on>
+        <sys_id>5106f240c8bf03107f44f3136bd8bb4e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:23:00</sys_updated_on>
+        <ui_id>8f0e4240-cbfd-41a4-acd3-f6dae5e5d9d9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XXW/bNhSG/wqha1eVv+PctTGCFUjaLc46DE0hUBRlc6VIjaTiuIH/+w4lWpLt1LUTD0uw3NmHX+85fB9S/HLvsdg79XrxSTCIkh4eBt1ONwhOOqNR1B0lwclwFLRJ7LU8gVMKPRUlUtn/t5jnNnB//3sWY0PjsO2TXCkqzHIJ7THTGceLz64bRMiM8RjavdMvX1tehhXMaKjyTu83mvaVxHFEOXS9xmpKDbpaSduUahaZ/R9LkqcgL2Sr4IWbYOxa0IcxtMAgqypoefTOUBFTkJNgrmnLS7GAXKVaVBFFcfxJ8DowY8LAlO+0loRBXTQyM4poihlHc2ZmCKNSmO/Z+e40+w7iuh07VUKhBsRqZYKwGBR5jXDoSgrNH+rmZIwNnhiVE5OrqtKSEarLasY0wTk3Z81Y2eFTZpgU5RCDI74aLXmeio9lEb1qgsZO5hrE0MzWxiYLi0PiyWQm51crsedMFFV0VeGSYF79SyYUKzI7Z5TbrRZ5GkHfloeNUSzKjZUJpuDQq14nLKTataAn5bTYyhRnGRPTMFPylhULgvzUn3L44ydczmG8ZlPhY2Jz9WH3sH8O8XER/owVs4lfwjQweNny9EKfcax1nT7UP/w7t+rLYqzLsaPDwnB2MFEsM+9gqVvqkl22HGLt0S4/x73at405a8zuQi0I6KA51SlWpvy5zdlvLnwYbHuIq2GzRnlYrANtK3bRHIs+lg0Os/aBmJVmc5RdA1qmpL+EChknryLrJFgn6wdEPQ+SKj72RmkdmX8HCzCJDktvu9yKxR+By88gCQaDKBpE/WG39uGIJPEwSgZ4SLq17+ZwtCoA4VtYHK0NUtrbULhD4zAm9tCyYgKOY57HFP2xErVLp4MkkhLON7FJCCh9e15UtyKk86SLqLQmMhLBZvIFXD+VJBusLyczwwYxjTTslo+uJWIuq8aIFlrIHKW5NtDNQMsafGs3Wu/5cufs4KLjB73yIsA8PoD93RcBro2NZ6GRu78DfW1yu7RfGGy5RNtk7jnqMHL3SKK6zeR2Rg5QDfsnpht8TlZBx2Z3N5vlZbWFZuNyCp4vJi+FAiucs5QVhij5PT4Y8U5P0WDNRoQ0wDjCW2iPxVeGPjvbVnKIoXuPu2xeHf3iHN3e+cCmgzUfRce29B6rryz9fsPT0cGm7r+a+n9i6v5uW5E1I+k8+osS0zB28Xqe2Pc1uqJpUTH0BvXRJRO2ODaImSi99dDDe8+hB37O/DynFSqTKqOHsjwEmcHrh81/Tszx8cA7rZR01s9ZGS8abNzkQdAlGbKa3xgmFimhSkoTQWG+FY3xjXdTdqN/ylyhBhKws8I+LiExJe9YCp/88Bbto9TRged44ZcrvM3KKW7EQSv+Cq9pTVFEkXXlAiVS2ceqKpbemHqbXrfU8cU/Stxh58Mem1pdpeWWbu2xOxlmJuUb58Iv15cX9akwfOJFOuj3u4PXc+HJN2k2jzuxklnmcjvybfr1H9AWou0YGgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5106f240c8bf03107f44f3136bd8bb4e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">4106f240c8bf03107f44f3136bd8bb1e</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>a3aba5be-b3d8-4699-bb48-f5966c98d1cc</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:23:00</sys_created_on>
+        <sys_id>1d06f240c8bf03107f44f3136bd8bb4e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:23:00</sys_updated_on>
+        <ui_id>8a09ccc9-5c4f-4359-b4f9-46a0260be0be</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2XXW/bNhSG/wqha1eVrdiOc9fGCFYgabc46zA0hUBRVMyVIjWSiuMG/u87lGhJtlPXTjwswXJnH3695/B9SPHLvccS78Q7So6DQZwe4WEQ9sIgOO6NRnE4SoPj4SjoksTreAJnFHoqSqSy/28xL2zg/v73PMGGJlHXJ4VSVJjFAtoTpnOO559dN4iQKeMJtHsnX752vBwrmNFQ5Z3crzXtKonjmHLoeoXVDTXociltXaqZ5/Z/IkmRgbyILYPnboKxa0EfxtACg6yqoOPRO0NFQkFOirmmHS/DAnKVal5HFMXJJ8GbwJQJA1O+01oSBnXRyEwpohlmHM2YmSKMKmG+Z+e70+w7iAt7dqqUQg2I1coEYQko8lrhyJUUmj80zekYGzwxqiCmUHWlJSNUV9VMaIoLbk7bsarDp9wwKaohBsd8OVryIhMfqyJ69QStnSw0iKG5rY1NFhaHxNPJVM4ul2LPmCir6KrCJcG8/pdOKFZkesYot1stiiyGvh0PG6NYXBgrE0zBoVezTlRKtWtBT8ppuZUZznMmbqJcyVtWLgjyM/+Gwx8/5XIG4zW7ET4mNlcfdg/7ZxAfl+HPWDGb+AVMA4MXHU/P9SnHWjfpQ/2jvwurvirGqhw7OioNZwcTxXLzDpa6pS7ZRcch1h1t83Ny1Pi2NWeD2V2kBQEdtKA6w8pUPzc5+82F94NtB3ENbNYoD4t1oG3Ezttj0ceqwWHW3ROzymyOsitAy1T0V1Ah4+TVZB0Hq2T9gKjnQVLNx84orSLz72ABJtFR5W2XW7n4I3D5GSTBYBDHg7g/DBsfjkiaDON0gIckbHw3g6NVAQjfovJobZHS3YTCHRr7MbGDliUTcBzzIqHoj6WobTodJLGUcL6JdUJA6duzsro1Ib0nXUSVNZGRCDaTz+H6qSXZYHM5mSk2iGmkYbd8dCURc1m1RnTQXBYoK7SBbgZaVuBbudGOni93zg4uOn7QKy8CzMMD2N9+EeDG2HgaGbn9O9DXprBL+6XBFgu0SeaOo/Yjd4ck6ttMbmbkANWwf+Jmjc/JMujYDLezWV1WG2i2Lqfg+WLyUiiwwjnLWGmIit/Dg5Fs9RQNVmxESAuMA7yFdlh8aejT000l+xj66HGXzaujX5yju1sf2HSw4qP40JbeYfWlpd+veTre29T9V1P/T0zd324rsmIkXcR/UWJaxi5fzxP7vkaXNCsrht6gEF0wYYtjg5iJylsPPbx3HLrn58zPc1qiMqkzeijLfZAZvH7Y/OfEHB4PvNVKaW/1nJXJvMXGdREEIcmR1fzGMDHPCFVSmhgK861sTK6966ob/VMWCrWQgJ0V9nEJiSl5xzL45Ie3aIgyRwee4blfrfA2r6a4Fnut+Cu8pjVFMUXWlXOUSmUfq6pcem3qTXrdUocX/yhx+50PO2xqfZVWW7qxx+5kmJqMr50Lv1xdnDenwvCJF+mg3w8Hr+fCk2/SfJb0EiXz3OV24Nv06z+qLZOIGBoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1d06f240c8bf03107f44f3136bd8bb4e"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4106f240c8bf03107f44f3136bd8bb1e^sys_idNOT IN5106f240c8bf03107f44f3136bd8bb4b,5906f240c8bf03107f44f3136bd8bb4c"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7006b240c8bf03107f44f3136bd8bbfc</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">4106f240c8bf03107f44f3136bd8bb1e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:23:00</sys_created_on>
+        <sys_id>5106f240c8bf03107f44f3136bd8bb4b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:23:00</sys_updated_on>
+        <ui_id>3f9ff1a7-4dcd-41c2-a7a0-8ad5a9c89574</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnQdAjMhrfAqcBCqQN0LjpoQmEFUnZRClSJSk7ruB/71IP22hc1Gl77M2cXe7OjDhwS3Tj6sbZhb6yViwVmX15CohQHsPfLRGMzEgZQRlf0pimyTRNoih5cxEX07SIE5YCh5QEREHFsZNqxYQTWuUdEJA1yMYX3lonKnCcTT6DcJOFqPhE2Ek2wR4mbC1h+3BGK10JyQwfeNZgcIvjhszan0rn8pZQcImt85H45LZDfq3IbWuPW2eEWg7n22HK/QhqwzyrOAoIf3ZcMY58SpCWB6QCxcBps90jhgO7U/IArIRyOI745mcrvuPCJMt8Y8lRIuV9cX/MBwt7uLwGB0iloa4xQytdaUG57c1hvIRGuvkx1jfc1V5qf8VBIcfbWjaV+tA7QvYDxi+GSGORBK+9Uk990FHer/Tm48jyRqjOlaEoNQW5P4FD74rGeT4t4ZJXOCivoK7R0bw2ei26y8ilCpcSD2Ep9QaX+ncbAvXEQzQWwhvErzv4AYzwKt7jGLzc0yzACpp3bxzHoU2c7AJit3YuwdqDSHQ3/9Z4ir3kQVze++OvUCNqd4Wb13zQsQuGyFxCVmZxlJ1+ehfTEw/sKC1t+6lmPgJ5HNLGoHsu5GMs8g3GIscD3+0emyhKWfYyRH8w4XXZOkPgi2ydFv2aQCW/CZT/mmfmKYqi/4H660AJm/cxGLR1y/9hnp58KPqde6+psEht4bF34z+VL2zxcQl6DG20+epFHbDdDx9ySi7zBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7806b240c8bf03107f44f3136bd8bbff</block>
+        <comment/>
+        <connected_to>3f9ff1a7-4dcd-41c2-a7a0-8ad5a9c89574</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="QueueSmart - Advance Turn Reminder">4106f240c8bf03107f44f3136bd8bb1e</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:23:00</sys_created_on>
+        <sys_id>5906f240c8bf03107f44f3136bd8bb4c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:23:00</sys_updated_on>
+        <ui_id>a3aba5be-b3d8-4699-bb48-f5966c98d1cc</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V224TMRD9lcjPq9VeaAV5q1IqIRUq0VAeoFrN2t7EwmsvviQNq/w7470lQkEN0Efe4jPjmXPO+igt0d413tmlvrJWrBSZf3mMiFABw98tEYzMSZVAlb6hKc2zyzxLkuz1q7S8zMs0YzlwyEhEFNQcO6lWTDihVdEBEdmA9KHw1jpRg+Ns9hmEmy1FzWfCznJsYcI2EnYPz3fStZDM8IFlAwZ3OG7IvP2ldC5rCSWX2LoYac9uO+T3etyuCbh1RqjVcL4dptyPoDYssEqTiPAnxxXjyKcCaXlEalAMnDa7CTEc2J2SB2AtlMNxJDQ/WfEDF2YXF6Gx4iiR8r44HYvBwR6ursEBUvHUeTO00rUWlNveHMYr8NItjrG+4a4JUvsrDko53tbS1+pD7wiZBowfDBFvkQRvgtJAfdBR3a/19uPI8kaozpWhKDUFOZ3AoXeld4FPS7jkNQ4qamgadLRojN6I7jJyqeOVxENcSb3FpeHVxkAD8RiNhfgG8esOfgAjgor3OAYv9zRLsIIW3QvHcWgTJ/uI2J1dSLD2IBLdLb77QLGXPIgren/CFWpE465w84YPOvbReYFJTzywo6y07aeGhQQUaUy9QfdczMdUFFtMRYEHvt9/9UmSsxMZ+osJL5qt9FS2Tov+k0BlzwQqfM0z85Qkyf9A/XOghC36GAzauuUvmKfHEIp+5+Q1FRapLQP2bvyfCoUdPi5Bj6GtNt+CqAO2/wm+4qwA8QYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4106f240c8bf03107f44f3136bd8bb1e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:22:59</sys_created_on>
+        <sys_id>0506f240c8bf03107f44f3136bd8bb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4106f240c8bf03107f44f3136bd8bb1e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:22:59</sys_created_on>
+        <sys_id>4106f240c8bf03107f44f3136bd8bb2d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4106f240c8bf03107f44f3136bd8bb1e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:22:59</sys_created_on>
+        <sys_id>5106f240c8bf03107f44f3136bd8bb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:22:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4106f240c8bf03107f44f3136bd8bb1e"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>7f3da200c87f03107f44f3136bd8bb43</sys_id>
+        <latest_snapshot>4106f240c8bf03107f44f3136bd8bb1e</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch3-hotfix1-06-18-2026_06-19-2026_0938.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=7f3da200c87f03107f44f3136bd8bb43^sys_idNOT IN9106f240c8bf03107f44f3136bd8bb8f"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"9106f240c8bf03107f44f3136bd8bb8f","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>7f3da200c87f03107f44f3136bd8bb43</plan_id>
+        <snapshot>ffde72d8cdb703107f44c0edd2feb06e</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 12:23:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9106f240c8bf03107f44f3136bd8bb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 12:23:00</sys_updated_on>
+        <trigger display_value="">9d06f240c8bf03107f44f3136bd8bb8c</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=7f3da200c87f03107f44f3136bd8bb43"/>
+</record_update>

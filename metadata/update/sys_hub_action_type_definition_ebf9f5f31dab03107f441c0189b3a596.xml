@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Calculates estimated wait time for a queue token using its queue position and service average time.</description>
+        <flow_priority/>
+        <ih_action>false</ih_action>
+        <internal_name>queuesmart__calculate_queue_eta</internal_name>
+        <label_cache>[{"name":"{{action.queue_record}}","label":"action➛Queue Record","type":"action","ref":"","reference_display":"Queue","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[7025e3b0-9b7c-47ab-b467-f9e43df1815d].estimated_wait_time}}","label":"step➛Script step➛Estimated Wait Time","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master_snapshot>ff9b3db71dab03107f441c0189b3a5ae</master_snapshot>
+        <master_snapshot_digest/>
+        <name>QueueSmart - Calculate Queue ETA</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:22:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ebf9f5f31dab03107f441c0189b3a596</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>QueueSmart - Calculate Queue ETA</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_ebf9f5f31dab03107f441c0189b3a596</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:13:18</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=ebf9f5f31dab03107f441c0189b3a596"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ebf9f5f31dab03107f441c0189b3a596"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>ebf9f5f31dab03107f441c0189b3a596</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>b17bf5b71dab03107f441c0189b3a51f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">397bf5b71dab03107f441c0189b3a50e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>ebf9f5f31dab03107f441c0189b3a596</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>f57bf5b71dab03107f441c0189b3a51f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+        <value/>
+        <variable display_value="Estimated Wait Time">717bb5b71dab03107f441c0189b3a5ef</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>ebf9f5f31dab03107f441c0189b3a596</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>3d7bf5b71dab03107f441c0189b3a51f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:06:40</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"794bc342-9c9d-444b-a3f2-dd4b6a5a0173\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">f97bb5b71dab03107f441c0189b3a5e7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ebf9f5f31dab03107f441c0189b3a596"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>estimated_wait_time</field>
+        <id>ebf9f5f31dab03107f441c0189b3a596</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>797bf5b71dab03107f441c0189b3a51e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+        <table>var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596</table>
+        <value>{{step[7025e3b0-9b7c-47ab-b467-f9e43df1815d].estimated_wait_time}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>ebf9f5f31dab03107f441c0189b3a596</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>fd7bf5b71dab03107f441c0189b3a51e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+        <table>var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>ebf9f5f31dab03107f441c0189b3a596</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>f17bf5b71dab03107f441c0189b3a51e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+        <table>var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=ebf9f5f31dab03107f441c0189b3a596^sys_idNOT INa17bb5b71dab03107f441c0189b3a5b0"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="QueueSmart - Calculate Queue ETA">ebf9f5f31dab03107f441c0189b3a596</action>
+        <cid>7025e3b0-9b7c-47ab-b467-f9e43df1815d</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>a17bb5b71dab03107f441c0189b3a5b0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:06:40</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a17bb5b71dab03107f441c0189b3a5b0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>a17bb5b71dab03107f441c0189b3a5b0</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>797bb5b71dab03107f441c0189b3a5c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:41</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>a17bb5b71dab03107f441c0189b3a5b0</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>b17bb5b71dab03107f441c0189b3a5ca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:06:40</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+&#13;
+    var queue = inputs.queue_record;&#13;
+&#13;
+    if (!queue) {&#13;
+        outputs.estimated_wait_time = 0;&#13;
+    } else {&#13;
+        var position = parseInt(queue.queue_position, 10) || 0;&#13;
+        var averageTime = parseInt(queue.service.average_service_time, 10) || 0;&#13;
+&#13;
+        outputs.estimated_wait_time = position * averageTime;&#13;
+    }&#13;
+&#13;
+})(inputs, outputs);</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a17bb5b71dab03107f441c0189b3a5b0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>a17bb5b71dab03107f441c0189b3a5b0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>b97bb5b71dab03107f441c0189b3a5c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:41</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>queue_record</field>
+        <id>a17bb5b71dab03107f441c0189b3a5b0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>f57bb5b71dab03107f441c0189b3a5e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:41</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_a17bb5b71dab03107f441c0189b3a5b0</table>
+        <value>{{action.queue_record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>a17bb5b71dab03107f441c0189b3a5b0</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>b57bb5b71dab03107f441c0189b3a5c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:41</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_a17bb5b71dab03107f441c0189b3a5b0^id=a17bb5b71dab03107f441c0189b3a5b0"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=a17bb5b71dab03107f441c0189b3a5b0"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=a17bb5b71dab03107f441c0189b3a5b0"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=a17bb5b71dab03107f441c0189b3a5b0^sys_idNOT IN257bb5b71dab03107f441c0189b3a5b5"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>queue_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Script step">a17bb5b71dab03107f441c0189b3a5b0</model>
+        <model_id>a17bb5b71dab03107f441c0189b3a5b0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_a17bb5b71dab03107f441c0189b3a5b0</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_snc_queuesmart_queue">x_snc_queuesmart_queue</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>257bb5b71dab03107f441c0189b3a5b5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=a17bb5b71dab03107f441c0189b3a5b0^sys_idNOT IN6d7bb5b71dab03107f441c0189b3a5ba"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=b6356146-32dd-4040-b299-4bd6f7ab0138</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>estimated_wait_time</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Estimated Wait Time</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">a17bb5b71dab03107f441c0189b3a5b0</model>
+        <model_id>a17bb5b71dab03107f441c0189b3a5b0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_a17bb5b71dab03107f441c0189b3a5b0</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>6d7bb5b71dab03107f441c0189b3a5ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a17bb5b71dab03107f441c0189b3a5b0"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>estimated_wait_time</element>
+        <help/>
+        <hint/>
+        <label>Estimated Wait Time</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_a17bb5b71dab03107f441c0189b3a5b0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>397bb5b71dab03107f441c0189b3a5bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=ebf9f5f31dab03107f441c0189b3a596^sys_idNOT IN257bfd771dab03107f441c0189b3a54d"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=cdd02f4a-e75a-4a29-b92b-afdd34ec1335</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_queuesmart_queue</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>queue_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Queue Record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="QueueSmart - Calculate Queue ETA">ebf9f5f31dab03107f441c0189b3a596</model>
+        <model_id>ebf9f5f31dab03107f441c0189b3a596</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_ebf9f5f31dab03107f441c0189b3a596</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_snc_queuesmart_queue">x_snc_queuesmart_queue</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>257bfd771dab03107f441c0189b3a54d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=257bfd771dab03107f441c0189b3a54d"/>
+    <sys_hub_action_output action="delete_multiple" query="model=ebf9f5f31dab03107f441c0189b3a596^sys_idNOT IN397bf5b71dab03107f441c0189b3a50e,717bb5b71dab03107f441c0189b3a5ef,f97bb5b71dab03107f441c0189b3a5e7"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=7c721309-aaed-44b4-895d-5074b1363f9a,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="QueueSmart - Calculate Queue ETA">ebf9f5f31dab03107f441c0189b3a596</model>
+        <model_id>ebf9f5f31dab03107f441c0189b3a596</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>397bf5b71dab03107f441c0189b3a50e</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:13:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=397bf5b71dab03107f441c0189b3a50e"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=397bf5b71dab03107f441c0189b3a50e"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=b439848d-a7b1-4dd9-8c12-394c2e102a60</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>estimated_wait_time</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Estimated Wait Time</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="QueueSmart - Calculate Queue ETA">ebf9f5f31dab03107f441c0189b3a596</model>
+        <model_id>ebf9f5f31dab03107f441c0189b3a596</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>717bb5b71dab03107f441c0189b3a5ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=717bb5b71dab03107f441c0189b3a5ef"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=717bb5b71dab03107f441c0189b3a5ef"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=5b6cdda0-d3ff-406f-8d29-8d363898fabb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="QueueSmart - Calculate Queue ETA">ebf9f5f31dab03107f441c0189b3a596</model>
+        <model_id>ebf9f5f31dab03107f441c0189b3a596</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>f97bb5b71dab03107f441c0189b3a5e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f97bb5b71dab03107f441c0189b3a5e7"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f97bb5b71dab03107f441c0189b3a5e7"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=ebf9f5f31dab03107f441c0189b3a596"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=ebf9f5f31dab03107f441c0189b3a596^sys_idNOT INf17bf5b71dab03107f441c0189b3a521"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="QueueSmart - Calculate Queue ETA">ebf9f5f31dab03107f441c0189b3a596</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>f17bf5b71dab03107f441c0189b3a521</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=f17bf5b71dab03107f441c0189b3a521"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>queue_record</element>
+        <help/>
+        <hint/>
+        <label>Queue Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_ebf9f5f31dab03107f441c0189b3a596</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:41</sys_created_on>
+        <sys_id>a17bb5b71dab03107f441c0189b3a593</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_ebf9f5f31dab03107f441c0189b3a596"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>estimated_wait_time</element>
+        <help/>
+        <hint/>
+        <label>Estimated Wait Time</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>b97bf5b71dab03107f441c0189b3a50c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>f17bb5b71dab03107f441c0189b3a5ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:28:42</sys_created_on>
+        <sys_id>fd7bf5b71dab03107f441c0189b3a516</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:28:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_ebf9f5f31dab03107f441c0189b3a596"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=ebf9f5f31dab03107f441c0189b3a596^sys_idNOT IN0cab7db71dab03107f441c0189b3a507"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="QueueSmart - Calculate Queue ETA">ebf9f5f31dab03107f441c0189b3a596</action_id>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_hub_action_plan","id":"0cab7db71dab03107f441c0189b3a507","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <snapshot>35612144c8b303107f44f3136bd8bb2e</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0cab7db71dab03107f441c0189b3a507</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:13:18</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Calculates estimated wait time for a queue token using its queue position and service average time.</description>
+        <flow_priority/>
+        <internal_name>queuesmart__calculate_queue_eta</internal_name>
+        <label_cache>[{"name":"{{action.queue_record}}","label":"action➛Queue Record","type":"action","ref":"","reference_display":"Queue","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[7025e3b0-9b7c-47ab-b467-f9e43df1815d].estimated_wait_time}}","label":"step➛Script step➛Estimated Wait Time","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master>true</master>
+        <name>QueueSmart - Calculate Queue ETA</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="QueueSmart - Calculate Queue ETA">ebf9f5f31dab03107f441c0189b3a596</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ff9b3db71dab03107f441c0189b3a5ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:22</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=ff9b3db71dab03107f441c0189b3a5ae"/>
+    <sys_variable_value action="delete_multiple" query="document_key=ff9b3db71dab03107f441c0189b3a5ae"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>ff9b3db71dab03107f441c0189b3a5ae</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:24</sys_created_on>
+        <sys_id>08ab7db71dab03107f441c0189b3a501</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:06:49</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"794bc342-9c9d-444b-a3f2-dd4b6a5a0173\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">48ab3db71dab03107f441c0189b3a5e5</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>ff9b3db71dab03107f441c0189b3a5ae</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>8cab7db71dab03107f441c0189b3a500</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <value/>
+        <variable display_value="Estimated Wait Time">00ab3db71dab03107f441c0189b3a5ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>ff9b3db71dab03107f441c0189b3a5ae</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>c0ab7db71dab03107f441c0189b3a501</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">8cab3db71dab03107f441c0189b3a5f1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ff9b3db71dab03107f441c0189b3a5ae"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>estimated_wait_time</field>
+        <id>ff9b3db71dab03107f441c0189b3a5ae</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>ccab3db71dab03107f441c0189b3a5ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae</table>
+        <value>{{step[7025e3b0-9b7c-47ab-b467-f9e43df1815d].estimated_wait_time}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>ff9b3db71dab03107f441c0189b3a5ae</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>c8ab7db71dab03107f441c0189b3a500</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>ff9b3db71dab03107f441c0189b3a5ae</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>44ab7db71dab03107f441c0189b3a500</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=ff9b3db71dab03107f441c0189b3a5ae^sys_idNOT INb39b3db71dab03107f441c0189b3a5cc"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="QueueSmart - Calculate Queue ETA">ff9b3db71dab03107f441c0189b3a5ae</action>
+        <cid>7025e3b0-9b7c-47ab-b467-f9e43df1815d</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>b39b3db71dab03107f441c0189b3a5cc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:06:48</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b39b3db71dab03107f441c0189b3a5cc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>b39b3db71dab03107f441c0189b3a5cc</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>48ab3db71dab03107f441c0189b3a5e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>b39b3db71dab03107f441c0189b3a5cc</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>8cab3db71dab03107f441c0189b3a5e1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:06:48</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+&#13;
+    var queue = inputs.queue_record;&#13;
+&#13;
+    if (!queue) {&#13;
+        outputs.estimated_wait_time = 0;&#13;
+    } else {&#13;
+        var position = parseInt(queue.queue_position, 10) || 0;&#13;
+        var averageTime = parseInt(queue.service.average_service_time, 10) || 0;&#13;
+&#13;
+        outputs.estimated_wait_time = position * averageTime;&#13;
+    }&#13;
+&#13;
+})(inputs, outputs);</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b39b3db71dab03107f441c0189b3a5cc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>b39b3db71dab03107f441c0189b3a5cc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>80ab3db71dab03107f441c0189b3a5e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>queue_record</field>
+        <id>b39b3db71dab03107f441c0189b3a5cc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>4cab3db71dab03107f441c0189b3a5e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_b39b3db71dab03107f441c0189b3a5cc</table>
+        <value>{{action.queue_record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>b39b3db71dab03107f441c0189b3a5cc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>84ab3db71dab03107f441c0189b3a5e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_b39b3db71dab03107f441c0189b3a5cc^id=b39b3db71dab03107f441c0189b3a5cc"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=b39b3db71dab03107f441c0189b3a5cc"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=b39b3db71dab03107f441c0189b3a5cc"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=b39b3db71dab03107f441c0189b3a5cc^sys_idNOT INfb9b3db71dab03107f441c0189b3a5cf"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>queue_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>queue_record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Script step">b39b3db71dab03107f441c0189b3a5cc</model>
+        <model_id>b39b3db71dab03107f441c0189b3a5cc</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_b39b3db71dab03107f441c0189b3a5cc</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_snc_queuesmart_queue">x_snc_queuesmart_queue</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>fb9b3db71dab03107f441c0189b3a5cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=b39b3db71dab03107f441c0189b3a5cc^sys_idNOT IN339b3db71dab03107f441c0189b3a5d6"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=b6356146-32dd-4040-b299-4bd6f7ab0138</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>estimated_wait_time</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Estimated Wait Time</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">b39b3db71dab03107f441c0189b3a5cc</model>
+        <model_id>b39b3db71dab03107f441c0189b3a5cc</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_b39b3db71dab03107f441c0189b3a5cc</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>339b3db71dab03107f441c0189b3a5d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b39b3db71dab03107f441c0189b3a5cc"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>estimated_wait_time</element>
+        <help/>
+        <hint/>
+        <label>Estimated Wait Time</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_b39b3db71dab03107f441c0189b3a5cc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>fb9b3db71dab03107f441c0189b3a5d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=ff9b3db71dab03107f441c0189b3a5ae^sys_idNOT IN379b3db71dab03107f441c0189b3a5b2"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=cdd02f4a-e75a-4a29-b92b-afdd34ec1335</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_queuesmart_queue</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>queue_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Queue Record</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="QueueSmart - Calculate Queue ETA">ff9b3db71dab03107f441c0189b3a5ae</model>
+        <model_id>ff9b3db71dab03107f441c0189b3a5ae</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_ff9b3db71dab03107f441c0189b3a5ae</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="x_snc_queuesmart_queue">x_snc_queuesmart_queue</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>379b3db71dab03107f441c0189b3a5b2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=379b3db71dab03107f441c0189b3a5b2"/>
+    <sys_hub_action_output action="delete_multiple" query="model=ff9b3db71dab03107f441c0189b3a5ae^sys_idNOT IN00ab3db71dab03107f441c0189b3a5ec,48ab3db71dab03107f441c0189b3a5e5,8cab3db71dab03107f441c0189b3a5f1"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=b439848d-a7b1-4dd9-8c12-394c2e102a60</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>estimated_wait_time</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Estimated Wait Time</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="QueueSmart - Calculate Queue ETA">ff9b3db71dab03107f441c0189b3a5ae</model>
+        <model_id>ff9b3db71dab03107f441c0189b3a5ae</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>00ab3db71dab03107f441c0189b3a5ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=00ab3db71dab03107f441c0189b3a5ec"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=00ab3db71dab03107f441c0189b3a5ec"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=5b6cdda0-d3ff-406f-8d29-8d363898fabb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="QueueSmart - Calculate Queue ETA">ff9b3db71dab03107f441c0189b3a5ae</model>
+        <model_id>ff9b3db71dab03107f441c0189b3a5ae</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>48ab3db71dab03107f441c0189b3a5e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=48ab3db71dab03107f441c0189b3a5e5"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=48ab3db71dab03107f441c0189b3a5e5"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=7c721309-aaed-44b4-895d-5074b1363f9a,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="QueueSmart - Calculate Queue ETA">ff9b3db71dab03107f441c0189b3a5ae</model>
+        <model_id>ff9b3db71dab03107f441c0189b3a5ae</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>8cab3db71dab03107f441c0189b3a5f1</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 06:13:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8cab3db71dab03107f441c0189b3a5f1"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8cab3db71dab03107f441c0189b3a5f1"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=ff9b3db71dab03107f441c0189b3a5ae"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=ff9b3db71dab03107f441c0189b3a5ae^sys_idNOT IN4cab7db71dab03107f441c0189b3a502"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="QueueSmart - Calculate Queue ETA">ff9b3db71dab03107f441c0189b3a5ae</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:24</sys_created_on>
+        <sys_id>4cab7db71dab03107f441c0189b3a502</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:24</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=4cab7db71dab03107f441c0189b3a502"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>queue_record</element>
+        <help/>
+        <hint/>
+        <label>Queue Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_ff9b3db71dab03107f441c0189b3a5ae</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>739b3db71dab03107f441c0189b3a5c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_ff9b3db71dab03107f441c0189b3a5ae"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>44ab3db71dab03107f441c0189b3a5ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>80ab3db71dab03107f441c0189b3a5f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>estimated_wait_time</element>
+        <help/>
+        <hint/>
+        <label>Estimated Wait Time</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 13:29:23</sys_created_on>
+        <sys_id>c0ab3db71dab03107f441c0189b3a5f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 13:29:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_ff9b3db71dab03107f441c0189b3a5ae"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>ebf9f5f31dab03107f441c0189b3a596</sys_id>
+        <latest_snapshot>ff9b3db71dab03107f441c0189b3a5ae</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch3-hotfix1-06-18-2026_06-19-2026_0938.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>

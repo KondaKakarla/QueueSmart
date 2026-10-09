@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="5be2a7fc7ca703107f44c9469eb959ee" label="Counter" max_length="40" name="x_snc_queuesmart_counter" type="collection">
+        <element choice="3" label="Status" max_length="40" name="status" reference="x_snc_queuesmart_available___busy___offline" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Available" sequence="0" value="available"/>
+                <element inactive_on_update="false" label="Busy" sequence="1" value="busy"/>
+                <element inactive_on_update="false" label="Offline" sequence="2" value="offline"/>
+            </choice>
+        </element>
+        <element display="true" label="Counter Name" max_length="40" name="counter_name" type="string"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Workplace" max_length="32" name="workplace" reference="x_snc_queuesmart_workplace" type="reference"/>
+        <element label="Service" max_length="32" name="service" reference="x_snc_queuesmart_service" type="reference"/>
+        <index name="index">
+            <element name="service"/>
+        </index>
+        <index name="index2">
+            <element name="workplace"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_notification">
+    <sys_notification action="INSERT_OR_UPDATE">
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <advanced_event_condition>false</advanced_event_condition>
+        <category display_value="Targeted Communication" name="Targeted Communication">4a789ea27f3032005f58108c3ffa91af</category>
+        <condition/>
+        <description/>
+        <event display_value="x_snc_queuesmart.queuesmart.student.call">0fc27508c83703107f44f3136bd8bb05</event>
+        <event_parm_1>true</event_parm_1>
+        <event_parm_1_table>sys_user</event_parm_1_table>
+        <event_parm_2>false</event_parm_2>
+        <event_parm_2_table>sys_user</event_parm_2_table>
+        <include_originator>false</include_originator>
+        <mandatory>false</mandatory>
+        <name>QueueSmart - Your Turn Called</name>
+        <notification_classifier/>
+        <order>100</order>
+        <recipient_fields/>
+        <recipient_users/>
+        <script><![CDATA[(function runRecipientScript(/*String*/ parm1, /*String*/ parm2) {
+      /*
+      //Create instance of AdvancedNotificationRecipients to add recipients
+      var nr = new sn_notification.AdvancedNotificationRecipients();
+      var sysIds = [];
+      var gr = new GlideRecord('sys_user');
+      gr.addQuery('first_name','IN',parm1);
+      gr.query();
+      while (gr.next()) {
+        sysIds.push(gr.getValue('sys_id'));
+      }
+      nr.addRecipientInfo('sys_user',sysIds);
+      return nr;*/
+      })(parm1,parm2);]]></script>
+        <sys_class_name>sys_notification</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-03 07:49:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f59d298cc8f303107f44f3136bd8bb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>QueueSmart - Your Turn Called</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name>sys_notification_f59d298cc8f303107f44f3136bd8bb19</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-03 07:49:20</sys_updated_on>
+        <table>x_snc_queuesmart_queue</table>
+        <triggered_by>event</triggered_by>
+    </sys_notification>
+</record_update>

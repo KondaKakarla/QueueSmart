@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_snc_queuesmart_queue" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>service</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>a3f8d7cd642703107f44370f5ab049eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>counter</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>2bf8d7cd642703107f44370f5ab049eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>staff</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>aff8d7cd642703107f44370f5ab049eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>status</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>27f8d7cd642703107f44370f5ab049ec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>student</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>abf8d7cd642703107f44370f5ab049ec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>queue_position</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>23f8d7cd642703107f44370f5ab049ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>estimated_wait_time</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>a7f8d7cd642703107f44370f5ab049ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>actual_start_time</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>2ff8d7cd642703107f44370f5ab049ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>actual_end_time</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>a3f8d7cd642703107f44370f5ab049ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>actual_service_time</element>
+            <list_id display_value="x_snc_queuesmart_queue" element="NULL" name="x_snc_queuesmart_queue" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">a7f8d7cd642703107f44370f5ab049ea</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_id>2bf8d7cd642703107f44370f5ab049ee</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_snc_queuesmart_queue</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-24 07:14:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a7f8d7cd642703107f44370f5ab049ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_queuesmart_queue</sys_name>
+            <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+            <sys_update_name>sys_ui_list_x_snc_queuesmart_queue_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-24 07:14:03</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

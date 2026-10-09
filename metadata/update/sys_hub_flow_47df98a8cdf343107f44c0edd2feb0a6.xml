@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1372000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Tracks queue service timing by recording Actual Start Time when a student enters Serving status and Actual End Time and Actual Service Time when the service is completed.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>queuesmart__service_time_tracker</internal_name>
+        <label_cache>[{"name":"Updated_1.current","label":"Trigger - Record Updated➛Queue Record","reference":"x_snc_queuesmart_queue","reference_display":"Queue","type":"reference","base_type":"reference","usedInstances":{"4785c51a-616a-4ac7-a29d-747e03e613be":["record"]},"attributes":{}}]</label_cache>
+        <master_snapshot>e615e86ccd3743107f44c0edd2feb007</master_snapshot>
+        <master_snapshot_digest/>
+        <name>QueueSmart - Service Time Tracker</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>8b152c6ccd3743107f44c0edd2feb082</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:43:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>47df98a8cdf343107f44c0edd2feb0a6</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>QueueSmart - Service Time Tracker</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name>sys_hub_flow_47df98a8cdf343107f44c0edd2feb0a6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 22:06:26</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>cb15c260cdb383107f44c0edd2feb0e6</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_variable_value action="delete_multiple" query="document_key=47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_queuesmart_queue">status=serving<item display_value="Serving" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="serving"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8b152c6ccd3743107f44c0edd2feb082</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:51</sys_updated_on>
+        <table>x_snc_queuesmart_queue</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>47df98a8cdf343107f44c0edd2feb0a6</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:51</sys_created_on>
+        <sys_id>0b152c6ccd3743107f44c0edd2feb083</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:51</sys_updated_on>
+        <trigger display_value="">8b152c6ccd3743107f44c0edd2feb082</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=47df98a8cdf343107f44c0edd2feb0a6^sys_idNOT IN0b152c6ccd3743107f44c0edd2feb083"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=47df98a8cdf343107f44c0edd2feb0a6^sys_idNOT IN4bdf98a8cdf343107f44c0edd2feb0a7"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>47df98a8cdf343107f44c0edd2feb0a6</id>
+        <name>QueueSmart - Service Time Tracker</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:43:55</sys_created_on>
+        <sys_id>4bdf98a8cdf343107f44c0edd2feb0a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 14:43:55</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=4bdf98a8cdf343107f44c0edd2feb0a7"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=47df98a8cdf343107f44c0edd2feb0a6^sys_idNOT IN0d402ce8cdf343107f44c0edd2feb071,8d402ce8cdf343107f44c0edd2feb08e,8d402ce8cdf343107f44c0edd2feb099"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="QueueSmart - Service Time Tracker">47df98a8cdf343107f44c0edd2feb0a6</model>
+        <model_id>47df98a8cdf343107f44c0edd2feb0a6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_47df98a8cdf343107f44c0edd2feb0a6</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:45:41</sys_created_on>
+        <sys_id>0d402ce8cdf343107f44c0edd2feb071</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0d402ce8cdf343107f44c0edd2feb071"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="QueueSmart - Service Time Tracker">47df98a8cdf343107f44c0edd2feb0a6</model>
+        <model_id>47df98a8cdf343107f44c0edd2feb0a6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_47df98a8cdf343107f44c0edd2feb0a6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:45:41</sys_created_on>
+        <sys_id>8d402ce8cdf343107f44c0edd2feb08e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8d402ce8cdf343107f44c0edd2feb08e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="QueueSmart - Service Time Tracker">47df98a8cdf343107f44c0edd2feb0a6</model>
+        <model_id>47df98a8cdf343107f44c0edd2feb0a6</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_47df98a8cdf343107f44c0edd2feb0a6</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:45:41</sys_created_on>
+        <sys_id>8d402ce8cdf343107f44c0edd2feb099</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 14:45:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8d402ce8cdf343107f44c0edd2feb099"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=47df98a8cdf343107f44c0edd2feb0a6^sys_idNOT IN7c402ce8cdf343107f44c0edd2feb01c"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="QueueSmart - Service Time Tracker">47df98a8cdf343107f44c0edd2feb0a6</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:45:40</sys_created_on>
+        <sys_id>7c402ce8cdf343107f44c0edd2feb01c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:47</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=47df98a8cdf343107f44c0edd2feb0a6^sys_idNOT INe7d1e8accdf343107f44c0edd2feb0ff"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="QueueSmart - Service Time Tracker">47df98a8cdf343107f44c0edd2feb0a6</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:52:41</sys_created_on>
+        <sys_id>e7d1e8accdf343107f44c0edd2feb0ff</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 22:06:16</sys_updated_on>
+        <ui_id>4785c51a-616a-4ac7-a29d-747e03e613be</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VUU/bMBD+K5afNtaFpAUE5QnRsU1ioFHGC0WRE19aT46T2U5pV/W/7+wkbVUYAomHIa0vjT/fXb7v/Plyu6CC0z4NuzyMjqKDtBf1et0w7B7uRclBL4m6vMcAgHaoYjlg5JTJCgyu/QMCLLUVk7GxTNvYihxGVRj2eMY/mlSL0gLHYC5MKdn85iU56URIrkHR/u1dh5ZMIwELmvYXW1vPVSBZAhJDzwRIbh6RZOelW1vIkayFuJZY4+dN8nWzSW6azUJzRyoKww6FmQXFkX0/Y9JAh+ZMcWYLPad9qysENDB+qeR8FTERymJZ6mJnRvxGAtFB6H8uOgOUmUIdsVrGTT9rOBswy4ZYH7uqm9B0UogURfkGcchYJe3pJlYHXJZWFKpOsSyRbXYhq1xd1O2hqwLt8SFSGSQBpVPr+NfisuGkuL9qSZ4J5TvTCJVFyuRqxazVIqmso7OgICHHOnHOylKocVzqYip8MlLJg7HERZDJ4h7facRYBWgg5B1gb1lwhvjAwzdMCyfiG5bB5GWHmrk5lcyYtRTsYfyrckxqYY2E2HfBtyD2tnDJ3osn+KoptBJrzHF+4GEHPpVCd3dGamfnJMUzMMSx3j3xMoiTQSqDyomdAMl47JEi+QmpDcjQFyB5ZSzRgGesCCPemwFxFS+dA4mq8gT/hCFFlhmwJJmTDxERinzSutDkC1pRulcMoW6eJzNlQjrRpPBOMKRxFqlKJFZqpOpyRjQYUcIyvH8tPZcOM4a3AfrIRhMzKbTFg0hJfZvbwABPejwGHaSVRmPYwAe6k/S68K3HrlajbFXFgbsj5SqPuW1rKrgnn50d0PNwjV1/9x4Dm1yMO6bL5bLTTLU9eHImROsRoCHFe7wx1RaLHyWSBx5HLe/l8uEge/GYegaldkxdtZy2OTZjihdp5W+N4FszatDskK+DzQH1WvNp7/9k+qcmkye+Mn2y/5TD0qO1oTZqro0/i41KkQfgJzF3o80/PnT+9wZ+mf2fQa61/7U/9MfJth/qbex8M5dc1BuN//dfzf+Hb8n/jYw3fwH+Zvu7PyQjnPPDCgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e7d1e8accdf343107f44c0edd2feb0ff"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_47df98a8cdf343107f44c0edd2feb0a6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:45:41</sys_created_on>
+        <sys_id>05402ce8cdf343107f44c0edd2feb0a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 14:45:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_47df98a8cdf343107f44c0edd2feb0a6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:45:41</sys_created_on>
+        <sys_id>c5402ce8cdf343107f44c0edd2feb095</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 14:45:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_47df98a8cdf343107f44c0edd2feb0a6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 14:45:41</sys_created_on>
+        <sys_id>c9402ce8cdf343107f44c0edd2feb089</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 14:45:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_47df98a8cdf343107f44c0edd2feb0a6"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Tracks queue service timing by recording Actual Start Time when a student enters Serving status and Actual End Time and Actual Service Time when the service is completed.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>queuesmart__service_time_tracker</internal_name>
+        <label_cache>[{"name":"Updated_1.current","label":"Trigger - Record Updated➛Queue Record","reference":"x_snc_queuesmart_queue","reference_display":"Queue","type":"reference","base_type":"reference","usedInstances":{"4785c51a-616a-4ac7-a29d-747e03e613be":["record"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>QueueSmart - Service Time Tracker</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="QueueSmart - Service Time Tracker">47df98a8cdf343107f44c0edd2feb0a6</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e615e86ccd3743107f44c0edd2feb007</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:49</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=e615e86ccd3743107f44c0edd2feb007^sys_idNOT IN6615e86ccd3743107f44c0edd2feb008"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>e615e86ccd3743107f44c0edd2feb007</id>
+        <name>QueueSmart - Service Time Tracker</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:49</sys_created_on>
+        <sys_id>6615e86ccd3743107f44c0edd2feb008</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:49</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=6615e86ccd3743107f44c0edd2feb008"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=e615e86ccd3743107f44c0edd2feb007^sys_idNOT IN2e15e86ccd3743107f44c0edd2feb009,aa15e86ccd3743107f44c0edd2feb07e,f615e86ccd3743107f44c0edd2feb089"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="QueueSmart - Service Time Tracker">e615e86ccd3743107f44c0edd2feb007</model>
+        <model_id>e615e86ccd3743107f44c0edd2feb007</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e615e86ccd3743107f44c0edd2feb007</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:49</sys_created_on>
+        <sys_id>2e15e86ccd3743107f44c0edd2feb009</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2e15e86ccd3743107f44c0edd2feb009"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="QueueSmart - Service Time Tracker">e615e86ccd3743107f44c0edd2feb007</model>
+        <model_id>e615e86ccd3743107f44c0edd2feb007</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e615e86ccd3743107f44c0edd2feb007</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:49</sys_created_on>
+        <sys_id>aa15e86ccd3743107f44c0edd2feb07e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=aa15e86ccd3743107f44c0edd2feb07e"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="QueueSmart - Service Time Tracker">e615e86ccd3743107f44c0edd2feb007</model>
+        <model_id>e615e86ccd3743107f44c0edd2feb007</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e615e86ccd3743107f44c0edd2feb007</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:50</sys_created_on>
+        <sys_id>f615e86ccd3743107f44c0edd2feb089</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f615e86ccd3743107f44c0edd2feb089"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=e615e86ccd3743107f44c0edd2feb007^sys_idNOT IN87152c6ccd3743107f44c0edd2feb03d"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="QueueSmart - Service Time Tracker">e615e86ccd3743107f44c0edd2feb007</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:51</sys_created_on>
+        <sys_id>87152c6ccd3743107f44c0edd2feb03d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:51</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9Va23LbNhD9FQyf2hmlQ4q6WO6TK9uNZxx7Iivpg+vhgAAocUqBKgHSVjP+9y54kSjeLEtUorwkFgACZ3fPnl2IevymedhmnnauTbHtMa2juVyygGNvuloyGJZq2OJ4oeYWmFMs/WClncsgZB3NCfzFlC2WHpaw2MGegEE/oCzQzo2OFmEvZA8rcUNhJ3g+3ibdU0un4fOLJTix/g1ZyMQCBzL5ExZQV8DWq6/pus/pMJm7Hg0Y184fnzraEgewrVRHfitMSbDB2jIQ3SWWuAqRQSk2ukwnpmF2u7rePesZ9sC0jS41McNnsK7onYIFssJJG/PZi2ScMrr2TMl/AcP0nnur3IoX4f4He57patZhYAthiffWH63UL8kwmfsuYfdL6fo8GUnQJZO+Fy74XYJaeZQ5OPRk5lEYCQXsx5YKKJdrHM7D3H+eZAdeuzy2KZ30fIK99ScsZeDaoWRCBcBxPQiFlXhE+GEQo59cje8nl9ZfF9Pxx6uJNbl6mE5uxtOrS+01tgsirnZMEKZYrMSc1zUNrl3mqbDxcGEDmo4mSOAu5QWRbpSx77WzYfTY59SNvVJiNcmmxDarM+ubaK3rtcQmuRMzcguJZSj+DnXdpIIFkctne1N4nIcdU9i2R5gyXEPhwTBH4bw7KvDKCs/kTW4iczpSz+aerv8gPqc6tS+dFz5l3uVmOw0mZzMguMuXoVQ+yvxi+UsWKH/Ac9rXi9vxx4u7P68efk//v57cf8r+nt7Dc8+YS2FJ38KUWjmvqyPAlrfyIvFJOTneTosg5LCFtY5nOTniAKwjcesKMPwRUvuBgTDH4fsA6uZkTo9PgOXObXrCJOTIBx7AP4iEAfhcokwxnZsFnqWhgg09RmSOU84Xkf/0yRVC5cvGiDoMsc9KENanA1VRZnACRRyI5alN3SiHJCr4tlAJ91eQLLaxegwINXr2cKAPlXYYumk7hj7U+9ihpq6PzJx6lCHWYpcFGrWoIu/TEBHT1tuBlUV3p5D1fN7sRKlom4+Z6YouqVSN24FmtAStq6AVJNd8l+auKZoMX24ztcm0llsPTCMMT9BdJVQt2EErHc9/Brk/XCdtTP6ZBX7IaVGp1BHI5WizAv2SuvPX42mm4wesGc/2ilNSy01QMlpjvjqaTvYYocNBb6CDPJqgjHZ/NLIJ7jrOcDBkOi3o5AZcJeIT1sc3iBhVMblOKytJFFVx7x0qeQDAkmK+G+DhWpmStFIpk7mfQxOf54xbADWwPKV6JWmceS5l2Vy7mV86OtrkelvZf5sapU43nTPa7w+HZAi3K8h9p8dsbPS6fTwaDkw2KOR+CV4TdFnhrSPeucRKxMfX6MKXZOq0vk84JoEFkzK5jh9Y2Tk0wPEWODkzV05VbFCsNn6A7nz+4WazDj0wqJLx7ftIJX4XUCrs6Luisn05L7UcgOQPGN9CohrZGp+d3P2twKho29Yj9SVn5qhPHbNam4bdKm3aQKwHf6Idyo65FNVmZVWrsmsuRJUpVdtb7EHnAmXyTUdDV9SWU4zWndI9nlPMgzuxLC9rL637gP2Jal/chrRYABUEZvlOXtcvfQQTCM5EroPSb04ZRfYKyTkDD3vQgcP5SIE5VNAb6k0Z2ZrfPxRX0vGXyiAMo7RNO70KV+DN97h9E2dk05FZ04H36zvw+lJXmD7Revfu/Imq0rGx6L1v3+KelWUvR99tduxY0Fq1urqqHWZ1ZV17y+rDK1bTdwcVKE6/FinQ0yQMh1cgn5PCFYcc8XVTyF0Yt8gc81nyKik79xqiwDCZo2QJSpYcsYZ4z3gltGJtA4arJEq/cYcBSCeeiN2RgLCIBauSJ9QgCpdUlZvvXs4afoGSvsUVMoAnZ6tc1pZC20oJM0b9rknPiGmMzPIvTYxcCdvOinq8tTXrjR+e1NWsuRu/384dn0ZPugsWK+T6JTVaYEnmTHQQhDh+uRMLqBsIGa/+TWvxykfyL8HSLK8qabWJVxvY2hLRkDxRMe2qakIF86NCluSrQuPlrsF8oxXzu22Yb+5nfu/goph6pLoqpt5rtxLu8YMlrboUPv0Pk80mPn4nAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=e615e86ccd3743107f44c0edd2feb007^sys_idNOT IN43152c6ccd3743107f44c0edd2feb03c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="QueueSmart - Service Time Tracker">e615e86ccd3743107f44c0edd2feb007</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:51</sys_created_on>
+        <sys_id>43152c6ccd3743107f44c0edd2feb03c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:51</sys_updated_on>
+        <ui_id>4785c51a-616a-4ac7-a29d-747e03e613be</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VWXU/bMBT9K5afNtaFhAKC8oTo2CZtoAHjhaLIiW9aT46T2U5pV/W/79pxSgWIFYkXtL60vl8+595zk94sqOB0QHeBx8lhsp/3k35/J453DnaTbL+fJTu8zwAS2qOKlYCRGvJKczxPmWycYbH4WXNmgadJlDdag7LLJfq5MLVk8+sQhpZ8IiRHPx3c3PZozTRWtKDpYPHAtSkkyTKQGHrRYXqI0c5rd+ZV3pSIKxWd8VvIHAYP+TpEDyY5OEncozCzoDggkIJJAz1aMoUsKz2nA6sbNGhg/FzJ+SpiIpRtiZZsZsQfvHk3dnEFILM8NGF1TEODWnMxZJZdYuXcNnrVr0rkYNqecChYI+3Juq0NOK+tqFSbYlkmu+xKNqU6aztCVwXW5tEYBAG14+mQt7SKy0l1d9GBPBXKtyRQlFXO5OrErNUia6yDs6Agwfe4ZHUt1DitdTUVPhmhlNFY4iEqZHWHdxoxVhHLHe4Iu8qiU7QPvfmaaeFIfMcymLzsUTM3J5IZc08Fe5j+bhySlligkPou+BakXgkuOdeitsd41RQC8GUviD7be05h+eG9oNZq3gt/lhqVIw5owJRM2/bnY+X/COaXyX8DcJ38r/zQnwYbNuCR7dt6LjlrHUH/e6+m/4O3pP9A480vwL9kH+88+2BdU5JXulmTPCLGW1NjndytKGHUxHGfF/xjeyHwx/LfKOdlu7EBg243TgVIbp6g1C0GlAjWQtpSfLAcwUmug3P1gni1DUn2Y/95Q3vyH7wnWoqtzWF+pGFnfC6Fbm+N1NbWcY4zMMSh3j72NIijQRqDzImdACl46i1V9gtyG5FLX4CUjbFEA85YEUa8NiPiKp47BRLVlBl+CUOqojBgSTYnHxIiFPmkdaXJF5SidFdcQts8D2bKhPSP+8orwZCgLNLUCKzWCNXljGg0ooQVuH8dPJcOM4bbAANEo4mZVNriIHLSbnMXGOGkx2PQ3T/ByAe6SXpeeOuRqxWYrao44/ZIucpjbruaCu7IZycH1DxcYdffvcfAkItxRzhUw6bAV1pdLpe3fwFX+zBr0woAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=43152c6ccd3743107f44c0edd2feb03c"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e615e86ccd3743107f44c0edd2feb007</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:49</sys_created_on>
+        <sys_id>2a15e86ccd3743107f44c0edd2feb054</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e615e86ccd3743107f44c0edd2feb007</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:50</sys_created_on>
+        <sys_id>b215e86ccd3743107f44c0edd2feb085</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e615e86ccd3743107f44c0edd2feb007</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:50</sys_created_on>
+        <sys_id>ba15e86ccd3743107f44c0edd2feb08f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QueueSmart" source="x_snc_queuesmart">821387347c6303107f44c9469eb9596e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="QueueSmart">821387347c6303107f44c9469eb9596e</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_e615e86ccd3743107f44c0edd2feb007"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>47df98a8cdf343107f44c0edd2feb0a6</sys_id>
+        <latest_snapshot>e615e86ccd3743107f44c0edd2feb007</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch3-hotfix1-06-18-2026_06-19-2026_0938.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=47df98a8cdf343107f44c0edd2feb0a6^sys_idNOT IN07152c6ccd3743107f44c0edd2feb084"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"07152c6ccd3743107f44c0edd2feb084","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id>47df98a8cdf343107f44c0edd2feb0a6</plan_id>
+        <snapshot>a84568accd3743107f44c0edd2feb05e</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 15:06:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>07152c6ccd3743107f44c0edd2feb084</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 15:06:51</sys_updated_on>
+        <trigger display_value="">8b152c6ccd3743107f44c0edd2feb082</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=47df98a8cdf343107f44c0edd2feb0a6"/>
+</record_update>
